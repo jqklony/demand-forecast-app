@@ -1,0 +1,30 @@
+{
+  "producto": "Aceite caja x12",
+  "fecha_entrenamiento": "2026-04-12T21:30:24.421993",
+  "registros_train": 394,
+  "registros_test": 99,
+  "metricas": {
+    "MAE": 4.35,
+    "RMSE": 5.54,
+    "R2": 0.1126,
+    "MAPE": 21.01
+  },
+  "tiempo_entrenamiento": "0.1s",
+  "features": [
+    "dia_semana",
+    "mes",
+    "dia_mes",
+    "quincena",
+    "es_fin_mes",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_30",
+    "mm_7",
+    "mm_14",
+    "mm_30",
+    "tendencia"
+  ],
+  "periodo_train": "2024-02-12 a 2025-08-14",
+  "periodo_test": "2025-08-15 a 2025-12-31"
+}

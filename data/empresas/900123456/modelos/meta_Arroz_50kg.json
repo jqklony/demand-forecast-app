@@ -1,0 +1,30 @@
+{
+  "producto": "Arroz 50kg",
+  "fecha_entrenamiento": "2026-04-12T21:30:24.250770",
+  "registros_train": 419,
+  "registros_test": 74,
+  "metricas": {
+    "MAE": 4.3,
+    "RMSE": 5.53,
+    "R2": 0.1454,
+    "MAPE": 23.42
+  },
+  "tiempo_entrenamiento": "0.2s",
+  "features": [
+    "dia_semana",
+    "mes",
+    "dia_mes",
+    "quincena",
+    "es_fin_mes",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_30",
+    "mm_7",
+    "mm_14",
+    "mm_30",
+    "tendencia"
+  ],
+  "periodo_train": "2024-02-12 a 2025-09-18",
+  "periodo_test": "2025-09-19 a 2025-12-31"
+}

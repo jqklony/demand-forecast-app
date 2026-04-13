@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+data/empresas/*/uploads/
+data/empresas/*/modelos/*.pkl
+*.pkl
+.env
+venv/

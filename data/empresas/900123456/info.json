@@ -1,0 +1,12 @@
+{
+  "nit": "900123456",
+  "nombre": "Distribuidora Demo SAS",
+  "sector": "Alimentos",
+  "contacto": "test@demo.com",
+  "fecha_registro": "2026-04-12T21:30:23.578400",
+  "ultimo_upload": "2026-04-12T21:30:23.616199",
+  "total_registros": 1569,
+  "productos": 3,
+  "periodo_inicio": "2024-01-01 00:00:00",
+  "periodo_fin": "2025-12-31 00:00:00"
+}
