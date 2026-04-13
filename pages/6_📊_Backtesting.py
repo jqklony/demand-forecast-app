@@ -47,6 +47,36 @@ with col2:
     pct_test = st.slider("% de datos para validación:", 10, 40, 20, 5,
                          help="Se usa el último X% de datos como 'futuro' para validar")
 
+with st.expander("❓ ¿Qué significa '% de datos para validación'? (click para ver explicación)"):
+    st.markdown("""
+    ### ¿Cómo funciona?
+    
+    Imagine que tiene **100 días** de datos históricos de ventas. Este slider controla cómo se dividen:
+    
+    | Slider | Entrenamiento | Validación | Resultado |
+    |--------|--------------|------------|-----------|
+    | **10%** | 90 días (pasado lejano) | 10 días (recientes) | Modelo más preciso, pero validación corta |
+    | **20%** ⭐ Recomendado | 80 días | 20 días | **Balance óptimo** entre precisión y confiabilidad |
+    | **30%** | 70 días | 30 días | Validación más confiable, modelo con menos datos |
+    | **40%** | 60 días | 40 días | Mucha validación pero modelo puede perder precisión |
+    
+    **Visualmente:**
+    ```
+    Sus datos: [■■■■■■■■■■■■■■■■■■■■|■■■■■]
+                ← El modelo aprende →  ← Se prueba aquí →
+                   de estos datos       Predicción vs Realidad
+    ```
+    
+    ### ¿Cuál elegir?
+    - **20%** → Úselo por defecto. Es el estándar de la industria.
+    - **30%** → Si quiere estar más seguro de que el resultado es confiable.
+    - **10%** → Solo si tiene pocos datos (menos de 3 meses).
+    - **40%** → Para una validación exhaustiva (pero el modelo tendrá menos datos para aprender).
+    
+    💡 **Consejo:** Pruebe con diferentes valores y compare los resultados. Si la precisión cambia 
+    mucho entre 20% y 30%, el modelo puede ser inestable y necesitar más datos.
+    """)
+
 if st.button("🔍 Ejecutar Backtesting", type="primary", use_container_width=True):
     with st.spinner("Ejecutando backtesting..."):
         # Preparar serie temporal
